@@ -18,10 +18,10 @@ jobs:
         uses: typst-community/setup-typst@v4
 
       - name: Build Spanish resume
-        run: typst compile src/es/software-engineer.typ output/resume-es.pdf
+        run: typst compile --root . src/es/software-engineer.typ output/resume-es.pdf
 
       - name: Build English resume
-        run: typst compile src/en/software-engineer.typ output/resume-en.pdf
+        run: typst compile --root . src/en/software-engineer.typ output/resume-en.pdf
 
       - name: Upload PDFs
         uses: actions/upload-artifact@v4
