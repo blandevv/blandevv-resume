@@ -71,7 +71,7 @@ Armenia, Colombia · #link("https://github.com/blandevv")[GitHub] · #link("http
     )
 
     #layout.skill_group(
-      "DevOps",
+      "DevOps y Herramientas",
       "Docker, Linux, Git, Azure DevOps",
     )
 
