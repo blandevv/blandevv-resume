@@ -80,6 +80,6 @@ This will automatically publish:
 
 ## License
 
-The resume content is © Jacobo Blandón Castro.
+The Typst template and build workflow are licensed under the MIT License.
 
-The Typst project structure and templates may be reused for learning purposes.
+Personal information, work experience, and resume content belong to the repository owner and are provided as examples.
