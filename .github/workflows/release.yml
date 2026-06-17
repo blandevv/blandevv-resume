@@ -1,0 +1,45 @@
+name: Relase Resume
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+
+        uses: actions/checkout@v4
+
+      - name: Install Typst
+
+        uses: typst-community/setup-typst@v4
+
+      - name: Create output directory
+
+        run: mkdir -p output
+
+      - name: Build Spanish resume
+
+        run: typst compile --root . src/es/software-engineer.typ output/resume-es.pdf
+
+      - name: Build English resume
+
+        run: typst compile --root . src/en/software-engineer.typ output/resume-en.pdf
+
+      - name: Create GitHub Release
+
+        uses: softprops/action-gh-release@v2
+
+        with:
+          files: |
+
+            output/resume-es.pdf
+
+            output/resume-en.pdf
