@@ -17,6 +17,9 @@ jobs:
       - name: Install Typst
         uses: typst-community/setup-typst@v4
 
+      - name: Create output directory
+        run: mkdir -p output
+
       - name: Build Spanish resume
         run: typst compile --root . src/es/software-engineer.typ output/resume-es.pdf
 
